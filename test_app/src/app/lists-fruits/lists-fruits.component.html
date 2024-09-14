@@ -1,0 +1,14 @@
+<p>lists-fruits works!</p>
+
+<div *ngIf="fruits.length > 0">
+  <ul>
+    <li *ngFor="let fruit of fruits">{{ fruit }}</li>
+
+    <input [(ngModel)]="newFruit" placeholder="Ajouter un fruit" />
+
+    <!-- Bouton pour ajouter le fruit à la liste -->
+    <button (click)="addFruit(this.newFruit)">Ajouter</button>
+
+    <p [ngClass]="{ 'active': isActive, 'inactive': !isActive }">Statut utilisateur</p>
+  </ul>
+</div>
